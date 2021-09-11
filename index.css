@@ -43,6 +43,10 @@ body > * {
     margin-left: 40px;
 }
 
+.topbar-opt a img{
+    display: none;
+}
+
 .content {
     width: 100%;
     max-width: 768px;
@@ -107,4 +111,66 @@ button {
     color: #011627;
     font-weight: bold;
     font-size: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6e6e6;
+}
+
+
+@media screen and (max-width:900px) {
+    .content {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .content {
+        min-height: calc(100vh - 230px); /* topbar heigh + footer heigh*/
+    }
+
+    .logo-container img {
+        width: 67px;
+    }
+    
+    .logo-container h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .content input {
+        max-width: 100%;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .content button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .content {
+        min-height: calc(100vh - 210px); /* topbar heigh + footer heigh*/
+    }
+
+    .logo-container img {
+        width: 47px;
+    }
+    
+    .logo-container h1 {
+        font-size: 24px;
+    }
+
+    .topbar-opts a span {
+        display: none;
+    }
+    
+    .topbar-opts a img { 
+        display: inline-block;
+        margin-top: 5px;
+    }
 }
