@@ -19,6 +19,6 @@
   "homepage": "https://github.com/andresmgsl/demobase-landing#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^2.6.2"
   }
 }

@@ -1,6 +1,5 @@
 require("dotenv").config();
-const fetch = (...args) =>
-  import("node-fetch").then(({ default: fetch }) => fetch(...args));
+const fetch = require('node-fetch');
 
 const { BUTTONDOWN_TOKEN } = process.env;
 
