@@ -1,10 +1,8 @@
-require("dotenv").config();
+import * as dotenv from 'dotenv';
+import * as fetch from 'node-fetch';
 
-// import 'dotenv';
-// import * as fetch from 'node-fetch';
-
-const fetch = require("node-fetch");
 const { BUTTONDOWN_TOKEN } = process.env;
+dotenv.config();
 
 exports.handler = async (event) => {
   const email = JSON.parse(event.body).payload.email;

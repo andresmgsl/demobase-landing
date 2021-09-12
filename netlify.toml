@@ -2,4 +2,5 @@
   base = "."
 
 [functions]
-  directory = "./functions"
+  directory = "./js"
+  node_bundler = "esbuild"
