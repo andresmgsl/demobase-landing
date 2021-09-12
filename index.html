@@ -11,29 +11,6 @@
 </head>
 
 <body>
-    <script>
-        const processSubscriptionForm = form => {
-            const data = new FormData(form)
-            data.append('form-name', 'subscription');
-            fetch('/', {
-                method: 'POST',
-                body: data,
-            }).then(() => {
-                form.innerHTML = `<div class="form-success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
-            }).catch(error => {
-                form.innerHTML = `<div class="form-error">Error: ${error}</div>`;
-            })
-        }
-
-        const emailSubscriptionForm = document.querySelector('#subscription-form')
-        if (emailSubscriptionForm) {
-            emailSubscriptionForm.addEventListener('submit', e => {
-                e.preventDefault();
-                processSubscriptionForm(emailSubscriptionForm);
-            })
-        }
-    </script>
-
     <div class="topbar">
         <div class="logo-container">
             <div class="logo">
@@ -86,6 +63,29 @@
             </a>
         </div>
     </div>
+
+    <script>
+        const processSubscriptionForm = form => {
+            const data = new FormData(form)
+            data.append('form-name', 'subscription');
+            fetch('/', {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                form.innerHTML = `<div class="form-success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+            }).catch(error => {
+                form.innerHTML = `<div class="form-error">Error: ${error}</div>`;
+            })
+        }
+
+        const emailSubscriptionForm = document.querySelector('#subscription-form');
+        if (emailSubscriptionForm) {
+            emailSubscriptionForm.addEventListener('submit', e => {
+                e.preventDefault();
+                processSubscriptionForm(emailSubscriptionForm);
+            })
+        }
+    </script>
 </body>
 
 </html>
