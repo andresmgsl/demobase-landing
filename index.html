@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,31 @@
     <title>Demobase - Document-based storage for Solana dapps</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
+    <script>
+        const processSubscriptionForm = form => {
+            const data = new FormData(form)
+            data.append('form-name', 'subscription');
+            fetch('/', {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                form.innerHTML = `<div class="form-success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+            }).catch(error => {
+                form.innerHTML = `<div class="form-error">Error: ${error}</div>`;
+            })
+        }
+
+        const emailSubscriptionForm = document.querySelector('#subscription-form')
+        if (emailSubscriptionForm) {
+            emailSubscriptionForm.addEventListener('submit', e => {
+                e.preventDefault();
+                processSubscriptionForm(emailSubscriptionForm);
+            })
+        }
+    </script>
+
     <div class="topbar">
         <div class="logo-container">
             <div class="logo">
@@ -31,12 +56,21 @@
 
         <div>
             <h1>We are comming soon...</h1>
-            <p>Do you own your data? You're the only middleman you can trust. Document-based storage for Solana dapps.</p>
+            <p>Do you own your data? You're the only middleman you can trust. Document-based storage for Solana dapps.
+            </p>
         </div>
-        <div>
-            <input type="text" placeholder="Write your email" />
-            <button>NOTIFY ME</button>
-        </div>
+        <form id="subscription-form" name="subscription" method="POST" data-netlify="true" netlify-honeypot="fuck-bots">
+            <div hidden aria-hidden="true">
+                <label>
+                    Don’t fill this out if you're human:
+                    <input name="fuck-bots" />
+                </label>
+            </div>
+            <div>
+                <input id="email" type="text" placeholder="Write your email" name="email" required />
+                <button type="submit">NOTIFY ME</button>
+            </div>
+        </form>
     </div>
 
     <div class="footer">
@@ -53,4 +87,5 @@
         </div>
     </div>
 </body>
+
 </html>

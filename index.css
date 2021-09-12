@@ -79,6 +79,18 @@ body > * {
     margin-left: 24px;
 }
 
+.form-success {
+    background-color: teal;
+    color: white;
+    padding: 16px;
+}
+
+.form-error {
+    background-color: crimson;
+    color: white;
+    padding: 16px;
+}
+
 a {
     color: white;
     text-decoration: none; /* no underline */
