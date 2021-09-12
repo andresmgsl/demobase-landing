@@ -3,4 +3,3 @@
 
 [functions]
   directory = "./js"
-  node_bundler = "esbuild"
