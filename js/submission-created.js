@@ -22,6 +22,7 @@ exports.handler = async (event) => {
     console.log(`Submitted to Buttondown:\n ${data}`);
 
   } catch (error) {
+    console.log(`erro es -> ${error}`);
     return ({ statusCode: 422, body: String(error) })
   }
 
