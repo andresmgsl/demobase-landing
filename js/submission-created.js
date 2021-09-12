@@ -1,5 +1,6 @@
-require('dotenv').config();
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+require("dotenv").config();
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const { BUTTONDOWN_TOKEN } = process.env;
 
@@ -20,5 +21,8 @@ exports.handler = async (event) => {
     .then((data) => {
       console.log(`Submitted to Buttondown:\n ${data}`);
     })
-    .catch((error) => ({ statusCode: 422, body: String(error) }));
+    .catch((error) => {
+      console.log(`el error es: ${error}`)
+      return { statusCode: 422, body: String(error) };
+    });
 };
