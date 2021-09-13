@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 body {
-    background-color: #011627;
+    background-color: #1f2833;
     font-family: "Space Grotesk";
     color: white;
     margin: 0;
@@ -100,7 +100,7 @@ input {
     background-color: transparent;
     color: white;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid #66fcf1;
     font-family: "Space Grotesk";
     letter-spacing: 1.5px;
     max-width: 400px;
@@ -117,17 +117,18 @@ input:focus {
 
 button {
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid #45a29e;
     font-family: "Space Grotesk";
-    background-color: white;
-    color: #011627;
+    background-color: #45a29e;
+    color: white;
     font-weight: bold;
     font-size: 100%;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #e6e6e6;
+    background-color: white;
+    color: #45a29e;
 }
 
 
