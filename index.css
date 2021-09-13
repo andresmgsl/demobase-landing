@@ -94,6 +94,11 @@ body > * {
 a {
     color: white;
     text-decoration: none; /* no underline */
+    transition: color 0.1s ease-in;
+}
+
+a:hover {
+    color: #66fcf1;
 }
 
 input {
@@ -112,15 +117,16 @@ input {
 input:focus {
     background-color: white;
     outline: none;
-    color: #011627;
+    color: #45a29e;
+    font-weight: bold;
 }
 
 button {
     padding: 10px;
     border: 2px solid #45a29e;
     font-family: "Space Grotesk";
-    background-color: #45a29e;
-    color: white;
+    background-color: #66fcf1;
+    color: #1f2833;
     font-weight: bold;
     font-size: 100%;
     cursor: pointer;
@@ -128,7 +134,6 @@ button {
 
 button:hover {
     background-color: white;
-    color: #45a29e;
 }
 
 
