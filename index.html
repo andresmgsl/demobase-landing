@@ -69,7 +69,7 @@
         const processSubscriptionForm = form => {
             const data = new FormData(form)
             data.append('form-name', 'subscription');
-            fetch('https://www.demobase.org/functions/subscribe', {
+            fetch('https://www.demobase.org/functions/test', {
                 method: 'POST',
                 body: data,
             }).then(() => {
