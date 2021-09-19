@@ -68,10 +68,9 @@
         console.log("Looking for update...");
         const processSubscriptionForm = form => {
             const data = new FormData(form)
-            data.append('form-name', 'subscription');
             fetch('https://www.demobase.org/functions/test', {
                 method: 'POST',
-                body: data,
+                body: JSON.stringify({ email: "andresmgsl@gmail.com" }),
             }).then(() => {
                 form.innerHTML = `<div class="form-success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
             }).catch(error => {
