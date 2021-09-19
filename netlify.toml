@@ -8,3 +8,9 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+  from = "https://arweave.demobase.org"
+  to = "/"
+  status = 200
+  force = true
