@@ -68,7 +68,7 @@
         console.log("Looking for update...");
         const processSubscriptionForm = form => {
             const data = new FormData(form)
-            fetch('https://www.demobase.org/functions/test', {
+            fetch('https://www.demobase.org/functions/subscribe', {
                 method: 'POST',
                 body: JSON.stringify({ email: "andresmgsl@gmail.com" }),
             }).then(() => {
