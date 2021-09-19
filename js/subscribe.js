@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 const { BUTTONDOWN_TOKEN } = process.env;
 
 exports.handler = async (event) => {
+  console.log("entra uno", event);
   const email = JSON.parse(event.body).email;
 
   console.log(`Recieved a submission: ${email}`);
