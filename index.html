@@ -69,7 +69,7 @@
         const processSubscriptionForm = form => {
             const data = new FormData(form)
             data.append('form-name', 'subscription');
-            fetch('/', {
+            fetch('https://www.demobase.org/.netlify/functions/submission-created', {
                 method: 'POST',
                 body: data,
             }).then(() => {
