@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Vault Updater
         id: vault-updater
-        uses: heavy-duty/drill-vault-updater-action@v1.0.15
+        uses: heavy-duty/drill-vault-updater-action@v1.0.16
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           rpc-endpoint: ${{ secrets.RPC_ENDPOINT }}
